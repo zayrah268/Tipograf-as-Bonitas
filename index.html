@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tipografías Bonitas: guía completa para elegir fuentes profesionales para redes sociales, branding y diseño. Aprende estilos, combinaciones y errores comunes.">
+  <title>Tipografías Bonitas | Fuentes Profesionales para Redes y Marca</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* ✅ NEW Premium Color Combination (Fresh & Modern) */
+      --bg1:#071116;
+      --bg2:#0A1C24;
+      --bg3:#0E2733;
+
+      --card: rgba(255,255,255,0.06);
+      --text:#F5FBFF;
+      --muted: rgba(245,251,255,0.78);
+      --border: rgba(255,255,255,0.12);
+
+      --teal:#14B8A6;
+      --sky:#38BDF8;
+      --mint:#34D399;
+      --gold:#FACC15;
+
+      --radius: 24px;
+      --shadow: 0 30px 85px rgba(0,0,0,.70);
+      --glow: 0 0 18px rgba(20,184,166,.22), 0 0 55px rgba(56,189,248,.16);
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; }
+
+    body{
+      font-family:"Poppins",sans-serif;
+      color: var(--text);
+      line-height: 1.95;
+      overflow-x:hidden;
+      background:
+        radial-gradient(900px 600px at 10% 10%, rgba(20,184,166,.14), transparent 60%),
+        radial-gradient(800px 520px at 90% 20%, rgba(56,189,248,.12), transparent 65%),
+        radial-gradient(900px 620px at 50% 100%, rgba(250,204,21,.10), transparent 70%),
+        linear-gradient(180deg, var(--bg1), var(--bg2), var(--bg3));
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 90px 90px;
+      opacity:.14;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .container{
+      width:min(1200px, 92%);
+      margin:0 auto;
+      padding: 26px 0 90px;
+    }
+
+    /* Topbar */
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom: 18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      font-size:14px;
+      opacity:.95;
+      letter-spacing:.3px;
+    }
+
+    .brand .dot{
+      width:12px;
+      height:12px;
+      border-radius:999px;
+      background: linear-gradient(45deg, var(--teal), var(--sky));
+      box-shadow: 0 0 18px rgba(20,184,166,.45);
+    }
+
+    .chip{
+      padding: 9px 14px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: var(--glow);
+      color: rgba(245,251,255,.92);
+      white-space:nowrap;
+    }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      border-radius: var(--radius);
+      padding: 56px 40px;
+      background:
+        linear-gradient(130deg, rgba(20,184,166,.16), rgba(56,189,248,.10)),
+        rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(400px 280px at 15% 0%, rgba(20,184,166,.16), transparent 62%),
+        radial-gradient(480px 320px at 85% 35%, rgba(250,204,21,.12), transparent 65%);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .heroContent{
+      position:relative;
+      z-index:1;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    h1{
+      font-family:"DM Serif Display", serif;
+      font-size: clamp(30px, 4vw, 60px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: .3px;
+    }
+
+    .hero p{
+      font-size:17px;
+      color: rgba(245,251,255,.88);
+      max-width: 95ch;
+    }
+
+    /* Links */
+    a{
+      text-decoration:none;
+      font-weight:800;
+    }
+
+    .highlightLink{
+      display:inline-block;
+      padding: 5px 12px;
+      border-radius: 12px;
+      background: rgba(20,184,166,.12);
+      border: 1px solid rgba(20,184,166,.22);
+      box-shadow: 0 0 22px rgba(20,184,166,.14);
+      color: rgba(245,251,255,.98);
+      transition:.25s ease;
+    }
+
+    .highlightLink:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 0 32px rgba(56,189,248,.22);
+    }
+
+    .inlineLink{
+      color: var(--sky);
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      transition:.25s ease;
+    }
+
+    .inlineLink:hover{
+      color:#fff;
+      text-shadow: 0 0 16px rgba(56,189,248,.55);
+    }
+
+    /* Cards */
+    article{
+      margin-top:28px;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .card{
+      position:relative;
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      background: var(--card);
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(360px 230px at 12% 0%, rgba(56,189,248,.14), transparent 60%),
+        radial-gradient(440px 320px at 88% 35%, rgba(20,184,166,.14), transparent 65%);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .card > *{ position:relative; z-index:1; }
+
+    h2{
+      font-size: 21px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    h2::before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background: linear-gradient(45deg, var(--teal), var(--sky));
+      box-shadow: 0 0 18px rgba(56,189,248,.35);
+    }
+
+    .text{
+      font-size:16px;
+      color: rgba(245,251,255,.86);
+    }
+
+    /* Table */
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:14px;
+      border-radius:18px;
+      overflow:hidden;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    th, td{
+      padding:14px;
+      font-size:15px;
+      text-align:left;
+      color: rgba(245,251,255,.85);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      vertical-align:top;
+    }
+
+    th{
+      background: rgba(20,184,166,.16);
+      font-weight:800;
+      color: rgba(245,251,255,.95);
+    }
+
+    /* List */
+    ul{
+      margin-top:12px;
+      padding-left: 18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    ul li{
+      list-style:none;
+      padding:12px 14px;
+      border-radius:18px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      position:relative;
+      transition:.25s ease;
+    }
+
+    ul li::before{
+      content:"✅";
+      position:absolute;
+      left:-6px;
+      top:10px;
+      font-size:18px;
+      filter: drop-shadow(0 0 10px rgba(20,184,166,.22));
+    }
+
+    ul li:hover{
+      transform: translateY(-2px);
+      border-color: rgba(56,189,248,.24);
+      box-shadow: 0 0 0 1px rgba(56,189,248,.14), 0 25px 60px rgba(0,0,0,.60);
+    }
+
+    footer{
+      margin-top:34px;
+      text-align:center;
+      font-size:14px;
+      color: rgba(245,251,255,.65);
+    }
+
+    footer .line{
+      width:100%;
+      height:1px;
+      background: rgba(255,255,255,.08);
+      margin:18px 0 12px;
+    }
+
+    @media(max-width:768px){
+      .hero{ padding: 38px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> Tipografías Bonitas • Diseño Profesional</div>
+      <div class="chip">Branding • Redes • Diseño Premium</div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="heroContent">
+        <h1>Tipografías Bonitas fuentes Profesionales para Redes y Marca</h1>
+
+        <p>
+          Las tipografías bonitas son uno de los elementos más poderosos del diseño visual. Aunque muchas personas piensan que una fuente es solo “un estilo de letra”, la realidad es que una tipografía puede cambiar por completo la forma en que el público percibe tu contenido.
+          Una frase escrita con una tipografía bonita no solo se ve mejor, también se siente más profesional, más confiable y mucho más atractiva.
+        </p>
+
+        <p>
+          En redes sociales, donde todo se mueve rápido, una tipografía bien elegida puede detener el scroll y hacer que la gente preste atención. En branding, una fuente elegante puede transformar una marca común en una marca premium.
+          Y en diseño digital, elegir una buena tipografía puede elevar la calidad de un post, un anuncio, un logo o cualquier proyecto creativo.
+        </p>
+
+        <p>
+          Por eso, cada vez más personas buscan
+          <a class="highlightLink" href="https://letrasbonitashub.com.mx/" target="_blank" rel="noopener noreferrer">
+            Tipografías Bonitas
+          </a>
+          para mejorar su estilo, destacar en internet y construir una identidad visual sólida.
+          En esta guía completa descubrirás qué son, cuáles estilos funcionan mejor, cómo elegir la fuente correcta y qué errores evitar.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <article>
+
+      <section class="card">
+        <h2>¿Qué son las tipografías bonitas y por qué influyen tanto?</h2>
+        <div class="text">
+          <p>
+            Las tipografías bonitas son fuentes que se ven estéticas, equilibradas y agradables a la vista. Sin embargo, la belleza de una tipografía no se trata solo de decoración.
+            Una fuente bonita es aquella que combina tres factores clave:
+          </p>
+          <p>
+            Estética: se ve atractiva, moderna o elegante<br><br>
+            Legibilidad: se entiende rápido y con claridad<br><br>
+            Personalidad: transmite una sensación específica (lujo, diversión, minimalismo, fuerza, etc.)
+          </p>
+          <p>
+            Una tipografía puede transmitir autoridad, emoción, energía o calma sin necesidad de cambiar el mensaje.
+            Por eso, en marketing y diseño, la tipografía se considera parte esencial de la comunicación.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Por qué las tipografías bonitas son tendencia en redes sociales</h2>
+        <div class="text">
+          <p>Las redes sociales han cambiado la forma de comunicar. El texto ya no solo se lee, también se “consume visualmente”. Por eso las tipografías bonitas se usan tanto en:</p>
+          <p>
+            Biografías de Instagram y TikTok<br><br>
+            Portadas de historias destacadas<br><br>
+            Frases motivacionales en Pinterest<br><br>
+            Miniaturas y banners de YouTube<br><br>
+            Diseños en Canva para contenido diario<br><br>
+            Posts publicitarios y anuncios de negocios
+          </p>
+          <p>
+            Una tipografía atractiva mejora el engagement porque hace que el contenido se sienta más cuidado.
+            Y cuando un contenido se ve cuidado, la gente confía más y reacciona mejor.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Principales tipos de tipografías bonitas</h2>
+        <div class="text">
+          <p><strong>1) Tipografías Serif</strong><br>
+            Tienen pequeños remates en las letras. Se ven elegantes, tradicionales y sofisticadas. Son perfectas para marcas premium, moda, revistas y proyectos formales.
+          </p>
+
+          <p><strong>2) Tipografías Sans Serif</strong><br>
+            Son limpias, modernas y sin remates. Son ideales para sitios web, branding profesional y contenido minimalista.
+          </p>
+
+          <p><strong>3) Tipografías Script</strong><br>
+            Son fuentes cursivas que parecen caligrafía. Se usan para frases estéticas, invitaciones, diseños románticos y contenido con estilo delicado.
+          </p>
+
+          <p><strong>4) Tipografías Display</strong><br>
+            Son fuentes llamativas, creativas y con personalidad fuerte. Funcionan perfecto para títulos, posters y contenido que necesita impacto rápido.
+          </p>
+
+          <p><strong>5) Tipografías Handwritten</strong><br>
+            Imitan escritura a mano. Aportan un toque cálido, personal y creativo. Se usan en journaling, diseños juveniles y contenido casual.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Cómo elegir tipografías bonitas según tu objetivo</h2>
+        <div class="text">
+          <p>
+            Elegir una fuente solo porque “se ve linda” no siempre es lo mejor. Una tipografía bonita debe adaptarse al objetivo del diseño.
+            Aquí tienes una guía clara y profesional:
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Objetivo</th>
+                <th>Tipografías bonitas recomendadas</th>
+                <th>Impacto principal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Branding y negocios</td>
+                <td>Sans serif modernas + serif elegantes</td>
+                <td>confianza y profesionalismo</td>
+              </tr>
+              <tr>
+                <td>Instagram y TikTok</td>
+                <td>Script aesthetic + minimalistas</td>
+                <td>estilo y estética</td>
+              </tr>
+              <tr>
+                <td>YouTube thumbnails</td>
+                <td>Display + bold gruesas</td>
+                <td>alto impacto y clics</td>
+              </tr>
+              <tr>
+                <td>Sitios web y blogs</td>
+                <td>Sans serif limpias</td>
+                <td>legibilidad y modernidad</td>
+              </tr>
+              <tr>
+                <td>Invitaciones</td>
+                <td>Script elegante + serif romántica</td>
+                <td>emoción y elegancia</td>
+              </tr>
+              <tr>
+                <td>Posters y frases</td>
+                <td>Display + handwritten</td>
+                <td>creatividad y atención</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="margin-top:16px;">
+            Cuando eliges según el objetivo, tu diseño no solo se ve bonito: se ve pensado y profesional.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Cómo combinar tipografías bonitas como un diseñador</h2>
+        <div class="text">
+          <p>
+            Combinar fuentes bien es una de las habilidades más importantes en diseño. Un error común es mezclar demasiadas tipografías, lo cual hace que el diseño se vea amateur.
+          </p>
+          <p>La forma profesional de combinar tipografías es:</p>
+          <p>
+            Usa una fuente fuerte para títulos<br><br>
+            Usa una fuente limpia para texto normal<br><br>
+            Mantén la consistencia en todo el diseño<br><br>
+            No uses más de 2 o 3 tipografías en un mismo proyecto
+          </p>
+          <p>
+            ✅ Fórmula simple que siempre funciona: <strong>Display para título + Sans serif para texto</strong>
+          </p>
+
+          <p style="margin-top:16px;">
+            Si quieres ver una colección muy bien optimizada y lista para usar,
+            <a class="inlineLink" href="https://visionary-sprite-7e7334.netlify.app/" target="_blank" rel="noopener noreferrer">
+              explora una colección premium de tipografías aquí
+            </a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Lista de tips para que tus tipografías bonitas se vean premium</h2>
+        <div class="text">
+          <ul>
+            <li>Prioriza la legibilidad sobre la decoración</li>
+            <li>Usa negrita solo cuando sea necesario</li>
+            <li>Mantén el espacio entre letras (tracking) equilibrado</li>
+            <li>No mezcles fuentes similares entre sí</li>
+            <li>Usa contraste entre fondo y texto</li>
+            <li>Mantén coherencia: una fuente fija ayuda a crear marca</li>
+            <li>Usa tamaños diferentes para jerarquía visual</li>
+            <li>Evita fuentes demasiado exageradas en textos largos</li>
+            <li>Alinea el texto correctamente para un look profesional</li>
+            <li>Prueba el diseño en móvil antes de publicarlo</li>
+          </ul>
+          <p style="margin-top:12px;">
+            Estos tips hacen que cualquier tipografía se vea más profesional incluso si estás usando fuentes gratuitas.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Errores comunes al usar tipografías bonitas (y cómo evitarlos)</h2>
+        <div class="text">
+          <p>
+            Si quieres que tu contenido se vea profesional y no parezca spam o amateur, evita estos errores:
+          </p>
+          <p>
+            Usar fuentes súper decorativas para textos largos<br><br>
+            Poner demasiadas tipografías en un solo post<br><br>
+            Usar colores sin contraste (texto difícil de leer)<br><br>
+            Elegir fuentes que no coinciden con el tema del contenido<br><br>
+            Usar tipografías cursivas en miniaturas donde se necesita claridad<br><br>
+            No mantener consistencia en tus publicaciones
+          </p>
+          <p>
+            En diseño, menos es más. Elegir una fuente correcta es mejor que usar muchas.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Conclusión</h2>
+        <div class="text">
+          <p>
+            Las tipografías bonitas no son solo una parte estética del diseño; son una herramienta estratégica para comunicar mejor y destacar en un mundo visual.
+            Ya sea que estés creando contenido para redes sociales, construyendo una marca personal, diseñando un logo o trabajando en un proyecto profesional,
+            una tipografía bien elegida puede elevar tu contenido al instante.
+          </p>
+          <p>
+            La clave está en elegir fuentes según el objetivo, mantener legibilidad, combinar con equilibrio y usar consistencia.
+            Si aplicas estos principios, tus diseños se verán más modernos, más limpios y más atractivos, y tu contenido generará una impresión más fuerte en cualquier plataforma.
+          </p>
+        </div>
+      </section>
+
+    </article>
+
+    <footer>
+      <div class="line"></div>
+      <p>© 2026 — Tipografías Bonitas • Diseño UI/UX Premium</p>
+    </footer>
+
+  </div>
+</body>
+</html>
